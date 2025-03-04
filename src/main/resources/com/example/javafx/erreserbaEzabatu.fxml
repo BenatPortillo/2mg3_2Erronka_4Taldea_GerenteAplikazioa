@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.javafx.ErreserbaEzabatuController"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #345A7B;">
+
+    <!-- Header -->
+    <ImageView onMouseClicked="#onAtzeaBotoiaClick" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <image>
+            <Image url="@../../../images/atzea.png" />
+        </image>
+    </ImageView>
+
+    <!-- Usuario Label -->
+    <Label fx:id="erabiltzailea" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Erabiltzailea" textFill="#CFD0CE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0"/>
+
+    <!-- Tabla de trabajadores -->
+    <TableView fx:id="erreserbenTaula" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" AnchorPane.bottomAnchor="150.0">
+        <columns>
+            <TableColumn fx:id="izenaColumn" text="Erreserba Izena" />
+            <TableColumn fx:id="dataColumn" text="Erreserba Data" />
+            <TableColumn fx:id="pertsonaColumn" text="Pertsona Kopurua" />
+            <TableColumn fx:id="mahaiaColumn" text="Mahai Zenbakia" />
+        </columns>
+    </TableView>
+
+    <!-- Detalles del trabajador seleccionado -->
+    <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+        <TextField fx:id="izenaField" promptText="Zenbakia" editable="false" style="-fx-font-size: 12px;"/>
+        <Button text="Ezabatu" onAction="#onEzabatuBotoiaClick" style="-fx-background-color: #FF3B30; -fx-text-fill: white; -fx-font-size: 14px;" maxWidth="120"/>
+    </VBox>
+
+</AnchorPane>

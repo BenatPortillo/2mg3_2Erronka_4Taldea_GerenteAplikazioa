@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-background-color: #345A7B;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.ErreserbaMenuaController">
+    <children>
+        <!-- Botón de ir atrás más grande -->
+        <ImageView onMouseClicked="#onAtzeaBotoiaClick" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../../../images/atzea.png" />
+            </image>
+        </ImageView>
+
+        <!-- Usuario Label ajustado -->
+        <Label fx:id="erabiltzailea" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Erabiltzailea" textFill="#CFD0CE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+
+        <!-- Tabla centrada y más grande -->
+        <TableView fx:id="erreserbaTaula" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="200.0" prefHeight="300.0">
+            <columns>
+                <TableColumn fx:id="izenaColumn" text="Erreserba Izena" />
+                <TableColumn fx:id="dataColumn" text="Erreserba Data" />
+                <TableColumn fx:id="pertsonaColumn" text="Pertsona Kopurua" />
+                <TableColumn fx:id="mahaiaColumn" text="Mahai Zenbakia" />
+            </columns>
+        </TableView>
+
+        <!-- Botones en fila horizontal justo debajo de la tabla -->
+        <HBox spacing="10" alignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="420.0">
+            <children>
+                <Button fx:id="btnGehitu" onAction="#onErreserbaGehituBotoiaClick" text="Erreserba Gehitu" prefHeight="40.0" prefWidth="150.0" />
+                <Button fx:id="btnEzabatu" onAction="#onErreserbaEzabatuBotoiaClick" text="Erreserba Ezabatu" prefHeight="40.0" prefWidth="150.0" />
+                <Button fx:id="btnEditatu" onAction="#onErreserbaEditatuBotoiaClick" text="Erreserba Editatu" prefHeight="40.0" prefWidth="150.0" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
