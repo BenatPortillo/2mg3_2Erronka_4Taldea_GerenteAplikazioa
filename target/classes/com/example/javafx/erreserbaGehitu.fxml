@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+<?import java.lang.String?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javafx.ErreserbaGehituController" style="-fx-background-color: #345A7B;">
+    <children>
+        <!-- Header -->
+        <ImageView onMouseClicked="#onAtzeaBotoiaClick" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../../../images/atzea.png" />
+            </image>
+        </ImageView>
+
+        <!-- Usuario Label ajustado -->
+        <Label fx:id="erabiltzailea" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Erabiltzailea" textFill="#CFD0CE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+
+        <!-- Formulario -->
+        <VBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <!-- Erreserba Izena -->
+                <Label text="Erreserba Izena:" style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+                <TextField fx:id="izenaField" promptText="Sartu Erreserbarako izena" GridPane.columnIndex="1" style="-fx-font-size: 12px;"/>
+
+                <!-- Erreserba Data -->
+                <Label text="Erreserba Data:" style="-fx-font-size: 14px; -fx-text-fill: white;" GridPane.rowIndex="1"/>
+                <TextField fx:id="dataField" promptText="Sartu Erreserbarako Data" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-font-size: 12px;"/>
+
+                <!-- Pertsona Kopurua -->
+                <Label text="Pertsona kopurua:" style="-fx-font-size: 14px; -fx-text-fill: white;" GridPane.rowIndex="2"/>
+                <TextField fx:id="pertsonaField" promptText="Sartu Erreserbarako pertsona kopurua" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-font-size: 12px;"/>
+
+                <!-- Mahaia -->
+                <Label text="Mahaia:" style="-fx-font-size: 14px; -fx-text-fill: white;" GridPane.rowIndex="3"/>
+                <TextField fx:id="mahaiaField" promptText="Sartu erreserbatu den mahaia" GridPane.columnIndex="1" GridPane.rowIndex="3" style="-fx-font-size: 12px;"/>
+            </GridPane>
+
+            <!-- Botón Guardar -->
+            <Button text="Gehitu" onAction="#onGehituBotoiaClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" maxWidth="120"/>
+        </VBox>
+    </children>
+</AnchorPane>

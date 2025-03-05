@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.PasswordField?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.ErreserbaEditatuController" style="-fx-background-color: #345A7B;">
+    <children>
+        <!-- Icono de regreso -->
+        <ImageView onMouseClicked="#onAtzeaBotoiaClick" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../../../images/atzea.png" />
+            </image>
+        </ImageView>
+
+        <!-- Usuario Label -->
+        <Label fx:id="erabiltzailea" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Erabiltzailea" textFill="#CFD0CE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0"/>
+
+
+        <TableView fx:id="erreserbenTaula" prefWidth="600" prefHeight="450"
+                   AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="750.0">
+            <columns>
+                <TableColumn fx:id="izenaColumn" text="Erreserba Izena" />
+                <TableColumn fx:id="dataColumn" text="Erreserba Data" />
+                <TableColumn fx:id="pertsonaColumn" text="Pertsona Kopurua" />
+                <TableColumn fx:id="mahaiaColumn" text="Mahai Zenbakia" />
+            </columns>
+        </TableView>
+
+
+
+        <!-- Formulario de edición -->
+        <VBox spacing="20" prefWidth="300" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="150.0">
+            <Label text="Erreserba Izena:"/>
+            <TextField fx:id="izenaField"/>
+
+            <Label text="Data:"/>
+            <TextField fx:id="dataField"/>
+
+            <Label text="Pertsona Kopurua:"/>
+            <TextField fx:id="pertsonaField"/>
+
+            <Label text="Mahai zenbakia:"/>
+            <TextField fx:id="mahaiaField"/>
+
+            <!-- Botón de guardar -->
+            <Button text="Editatu" onAction="#onEditatuBotoiaClick"/>
+        </VBox>
+    </children>
+</AnchorPane>
+

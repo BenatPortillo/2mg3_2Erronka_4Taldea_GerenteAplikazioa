@@ -9,4 +9,3 @@ git commit -m "Eguraldia aktualizatuta automatikoki"
 
 git push origin master
 
-pause

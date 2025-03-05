@@ -220,7 +220,7 @@ public class EguraldiaController {
     public static void ejecutarBat(String rutaBat) throws IOException {
         ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", rutaBat);
         pb.redirectErrorStream(true);
-        pb.directory(new File("2mg3_2Erronka_4Taldea_GerenteAplikazioa"));
+        pb.directory(new File("..\\2mg3_2Erronka_4Taldea_GerenteAplikazioa"));
 
         Process proceso = pb.start();
 

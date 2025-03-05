@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane style="-fx-background-color: #345A7B;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.TxatController">
+    <children>
+        <!-- Botón de ir atrás -->
+        <ImageView onMouseClicked="#onAtzeaBotoiaClick" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../../../images/atzea.png" />
+            </image>
+        </ImageView>
+
+        <!-- Etiqueta de nombre de usuario -->
+        <Label fx:id="erabiltzailea" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Usuario" textFill="#CFD0CE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+
+        <!-- Área de mensajes -->
+        <TextArea fx:id="messagesArea" wrapText="true" editable="false" style="-fx-font-size: 14px; -fx-background-color: #000000; -fx-text-fill: #000000;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0" AnchorPane.bottomAnchor="120.0" />
+
+        <!-- Campo para escribir mensajes -->
+        <TextField fx:id="messageInput" promptText="Escribe tu mensaje..." style="-fx-background-color: #3B4B60; -fx-text-fill: #CFD0CE;" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="90.0" />
+
+
+
+        <!-- Botón para enviar el mensaje -->
+        <Button fx:id="sendButton" text="Enviar" onAction="#onSendButtonClick" style="-fx-background-color: #4CAF50; -fx-text-fill: #FFFFFF;" prefWidth="80.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="20.0" />
+
+    </children>
+</AnchorPane>
